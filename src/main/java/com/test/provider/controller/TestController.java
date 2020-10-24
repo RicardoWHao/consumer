@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class TestController {
 
-    @Reference(interfaceName = "com.test.provider.service.TestService", url = "dubbo://10.79.240.165:20880")
+    @Reference(interfaceName = "com.test.provider.service.TestService", url = "dubbo://127.0.0.1:20880", check = false)
     private TestService testService;
 
     @GetMapping("/hello")
